@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Material CV/Resume/Vcard/Portfolio by Hencework.</title>
+  <title>Gaspar Uribe</title>
   <meta name="description" content="Matresume is a material CV / Resume / Vcard / Portfolio HTML5 template by hencework." />
   <meta name="keywords" content="material design, resume, responsive template, cv, multipurpose, portfolio, html5 template, themeforest.net, bootstrap, html5, creative, landing page, sass, clean, design, modern, angular js," />
   <meta name="author" content="hencework"/>
@@ -25,7 +25,7 @@
   				<!--Top Header-->
   				<header class="mdl-layout__header">
   					<div class="mdl-layout__header-row mdl-scroll-spy-1">
-  						<!-- Title -->	<a href="<?php echo esc_url(home_url('/')); ?>"><span class="mdl-layout-title"><?php	//bloginfo('name')?></span></a>
+  						<!-- Title -->	<a href="https://gasparuribe.cl/"><span class="mdl-layout-title">Titulo</span></a>
   						<div class="mdl-layout-spacer"></div>
   						<div class="mdl-layout-spacer"></div>
 
@@ -37,9 +37,7 @@
 
   						<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
   							data-mdl-for="demo-menu-lower-right">
-    							<?php
-    						menuSuperior();
-    						?>
+    							<!--Menu Superior-->
   						</ul>
   					</div>
   				</header>
@@ -51,17 +49,26 @@
   						<div class="drawer-profile-wrap">
   							<div class="candidate-img-drawer mt-25 mb-20"></div>
   							<span class="candidate-name block mb-10 text-center">Gaspar Uribe</span>
-  							<?php
-  							//mgup_echo_social_icons();
-  							?>
+  							<!-- Iconos sociales -->
   						</div>
   						<div class="mdl-scroll-spy-2">
-  						        <?php menuLateral(); ?>
+                <ul class="mdl-navigation">
+                  <li>
+                    <a class="mdl-navigation__link border-top-sep" data-scroll href="#body">
+                      <i class="zmdi zmdi-border-color pr-15"></i>
+                      <span class="font-capitalize">about</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mdl-navigation__link border-top-sep" data-scroll href="#skills_sec">
+                      <i class="zmdi zmdi-cutlery pr-15"></i>
+                      <span class="font-capitalize">skills</span>
+                    </a>
+                  </li>
+                </ul>
   						</div>
   						<div class="drawer-footer mt-50 mb-30 text-center" data-nosnippet>
-  							<p class="font-12 mt-10">Gaspar Uribe &copy; <?php
-  							echo date('Y', strtotime(date('Y')));
-  							?></p>
+  							<p class="font-12 mt-10">Gaspar Uribe &copy; 2022</p>
   						</div>
   					</div>
   				</div>
@@ -78,18 +85,18 @@
                     <div class="mdl-card mdl-shadow--2dp">
                       <div class="row">
                         <div class="col-md-5 col-xs-12">
-                          <div class="candidate-img"  style="background: url('<?php echo esc_url(home_url('/')); ?>wp-content/uploads/2019/06/dbd76d63-142d-40f5-983e-0e5d96e39a0d-300x300.jpg');background-size: cover;">
+                          <div class="candidate-img"  style="background: url('https://gasparuribe.cl/wp-content/uploads/2019/06/dbd76d63-142d-40f5-983e-0e5d96e39a0d-300x300.jpg');background-size: cover;">
                           </div>
-                          <?php //mgup_echo_social_icons(); ?>
+                          <!-- Iconos sociales -->
                         </div>
                         <div class="col-md-7 col-xs-12">
                           <div class="info-wrap">
-                            <h1  data-nosnippet><?php bloginfo('name') ?></h1>
+                            <h1  data-nosnippet>Titulo</h1>
                             <h5 class="mt-0 font-grey"  data-nosnippet>Martín Gaspar Uribe Pesqueira</h5>
                             <div class="mt-0"  data-nosnippet>
-                              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect font-white bg-yellow  mr-10" style="margin-top: 10px;" href="<?php echo get_permalink(1861); ?>"><?php echo get_the_title(1861); ?></a>
-                              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect font-white bg-blueish-dark mr-10" style="margin-top: 10px;" href="<?php echo esc_url(home_url('/')); ?>experiencia/">Experiencia</a>
-                              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect font-white bg-hotpink " style="margin-top: 10px;" href="<?php echo esc_url(home_url('/')); ?>sobre-mi/">Sobre mí</a>
+                              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect font-white bg-yellow  mr-10" style="margin-top: 10px;" href="tienda/">Tienda</a>
+                              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect font-white bg-blueish-dark mr-10" style="margin-top: 10px;" href="experiencia/">Experiencia</a>
+                              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect font-white bg-hotpink " style="margin-top: 10px;" href="sobre-mi/">Sobre mí</a>
                             </div>
                             <div class="info-wrap mt-15">
                               ¡Hola! Esta es mi web personal y la hago para mi gusto, le cambio detalles constantemente poco a poco. Espero estés bien, encuentres lo que buscas y disfrutes en el camino.
