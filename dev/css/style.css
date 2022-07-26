@@ -699,6 +699,9 @@ p {
 .font-red {
   color: #ff3d00 !important; }
 
+.font-hotpink {
+  color: hotpink !important; }
+
 .bg-green {
   background: #01c853 !important; }
 
@@ -711,6 +714,15 @@ p {
 .bg-red {
   background: #ff3d00 !important; }
 
+.bg-hotpink {
+  background: hotpink !important; }
+
+.bg-red-dark {
+  background: #c82121 !important; }
+
+.bg-blueish-dark{
+  background: #404b89 !important; }
+  
 .bg-violet {
   background: #6200eb !important; }
 
@@ -725,6 +737,9 @@ p {
 
 .border-top-red {
   border-top: 3px solid #ff3d00; }
+
+.border-top-hotpink {
+  border-top: 3px solid hotpink; }
 
 .font-uppercase {
   text-transform: uppercase; }
