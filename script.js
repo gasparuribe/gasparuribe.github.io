@@ -73,6 +73,8 @@ var currentPagePath = window.location.pathname;
 var localHostFix = "/ga.git.io";
 if (currentPagePath.indexOf(localHostFix) !== -1) {
     currentPagePath = currentPagePath.replace(localHostFix, "");
+} else {
+    localHostFix = "";
 }
 const getUserIdentifier = getCookie("ui");
 //Aqui voy - verificar que ui aun es valido
