@@ -5,7 +5,7 @@ function backend_post(formData) {
         data: formData,
         success: function (response) {
             // Handle the response from the server here.
-            console.log("Login successful: " + response);
+            console.log("Login successful: " + JSON.stringify(response));
             // You can redirect the user or perform other actions based on the response.
         },
         error: function (error) {
