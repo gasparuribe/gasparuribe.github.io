@@ -80,7 +80,7 @@ const getUserIdentifier = getCookie("ui");
 //Aqui voy - verificar que ui aun es valido
 //localStorage.removeItem("ui");
 if (!getUserIdentifier) {
-    if (currentPagePath !== '/index.html' || currentPagePath !== '/index' || currentPagePath !== '/') {
+    if (currentPagePath !== '/index.html' && currentPagePath !== '/index' && currentPagePath !== '/') {
         window.location.href = localHostFix + '/index.html';
     } else {
         /*Aqui voy - Cargar login en body en vez de harcoded en index.html*/
