@@ -1,18 +1,90 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>GaU test</title>
-  <meta name="description" content="Sitio test." />
-  <meta name="keywords" content="" />
-  <meta name="author" content="GasparUribe"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Login to App</title>
+    <meta name="description" content="Una App para usos relacionados a MGUP" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="GasparUribe" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('img/bosque.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+            .login-container input {
+                width: 90%;
+                padding: 10px;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            .login-container button {
+                width: 50%;
+                padding: 10px;
+                background: #007BFF;
+                border: none;
+                color: #fff;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+    </style>
 </head>
-<body id="body">
-  	<!--Main Wrapper-->
-  		<div class="main-wrapper">
-  			test the test
-  		</div>
-  		<!--/Main Wrapper-->
+<body>
+    <div class="login-container">
+        <p id="message"></p>
+        <h2>The App</h2>
+        <form id="loginForm" action="#">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <div style="width: 40%; display: inline-block; "><input type="checkbox" id="rememberMe" name="rememberMe" style="width:15px;"><label for="rememberMe"> Remember Me</label></div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <!-- jQuery 3 -->
+    <script src="AdminLTE-2.4.18/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("loginForm");
+            const message = document.getElementById("message");
+            const usernameInput = document.getElementById("username");
+            const rememberMeCheckbox = document.getElementById("rememberMe");
+            var localRememberMeCheckbox = localStorage.getItem('rememberMeCheckbox');
+            if (localRememberMeCheckbox !== null && localRememberMeCheckbox == "true") {
+                rememberMeCheckbox.checked = true;
+            }
+            loginForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                localStorage.setItem("rememberMeCheckbox", rememberMeCheckbox.checked);
+                const username = usernameInput.value;
+                var formData = $(this).serialize();
+                if (login_try(formData)) {
+                    message.textContent = "Login successful! Wait Redirect";
+                    window.location.href = 'dashboard.html';
+                } else {
+                    message.textContent = "Login failed. Please try again.";
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
