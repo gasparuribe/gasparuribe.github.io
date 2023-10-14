@@ -1,4 +1,4 @@
-var ver = 1;
+var ver = 2;
 function backend_post(formData) {
     $.ajax({
         type: "POST",
