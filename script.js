@@ -1,7 +1,7 @@
 function backend_post(formData) {
     $.ajax({
         type: "POST",
-        url: "https://2wcjrzyccdfksj3b73afrzcpw40uryhg.lambda-url.us-east-2.on.aws", // Replace with your actual server-side endpoint
+        url: "https://2wcjrzyccdfksj3b73afrzcpw40uryhg.lambda-url.us-east-2.on.aws?action=prueba", // Replace with your actual server-side endpoint
         data: formData,
         success: function (response) {
             // Handle the response from the server here.
