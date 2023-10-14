@@ -59,7 +59,7 @@ function setSecureCookie(name, value, hoursToExpire) {
     const mypath = " path=/";
     document.cookie = `${name}=${value}; expires=${expires};${secureFlag}${httpOnlyFlag}${mypath}`;
 }
-console.info("script.js - Funciones cargadas v:"+string(ver));
+console.info("script.js - Funciones cargadas v:"+ver);
 /* Aqui ya se cargaron todas las funciones y comienza lo ejecutable.
 Aqui voy!!!
 1. consultar a BACKEND (aws lambda) un nonce_token
